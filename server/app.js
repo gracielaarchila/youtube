@@ -25,6 +25,6 @@ app.use(session({
     saveUninitialized: false,   //guarda una cookie sin valor inicial
 }))
 
-app.use('/youtube', userRoutes);
+app.use('/api', userRoutes);
 
 module.exports = app;

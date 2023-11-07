@@ -54,8 +54,8 @@ async function updateUser(req, res){
 
 async function deleteUser(req, res){
     try{
-        const curso = await User.findByIdAndDelete(req.params.id);
-        if(!curso){
+        const users = await User.findByIdAndDelete(req.params.id);
+        if(!users){
             return res.status(404).send({ message: 'Usuario no encontrado' });
         }
         res.status(200).send({message: 'Usuario eliminado exitosamente'});
